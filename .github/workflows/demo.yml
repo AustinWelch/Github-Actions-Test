@@ -11,17 +11,3 @@ jobs:
     steps:
         uses: actions/checkout@v3
         run: gcc hello.c
-
-  linux:
-    runs-on: ubuntu-latest
-    name: Linux
-    steps:
-        uses: actions/checkout@v3
-        run: make hello.c
-
-  macos:
-    runs-on: macos-latest
-    name: Macos
-    steps:
-        uses: actions/checkout@v3
-        run: gcc hello.c
