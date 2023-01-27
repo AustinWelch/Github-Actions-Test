@@ -21,6 +21,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Compile
-        run: gcc hello.c
+        run: gcc hello.c - o hello
       - name: Run
         run: ./hello
