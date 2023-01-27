@@ -5,10 +5,18 @@ on:
   pull_request:
 
 jobs:
-  ubuntu:
-    runs-on: windows-latest
-    name: Windows
+  linux:
+    runs-on: ubuntu-latest
+    name: Linux
     steps:
       - uses: actions/checkout@v3
-      - name: compile
+        run: make hello.c
+        run: ./hello.o
+
+  macos:
+    runs-on: macos-latest
+    name: Macos
+    steps:
+      - uses: actions/checkout@v3
         run: gcc hello.c
+        run: ./hello.o
