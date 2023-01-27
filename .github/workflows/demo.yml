@@ -10,7 +10,9 @@ jobs:
     name: Linux
     steps:
       - uses: actions/checkout@v3
+      - name: Compile
         run: make hello.c
+      - name: Run
         run: ./hello.o
 
   macos:
@@ -18,5 +20,7 @@ jobs:
     name: Macos
     steps:
       - uses: actions/checkout@v3
+      - name: Compile
         run: gcc hello.c
+      - name: Run
         run: ./hello.o
