@@ -9,5 +9,6 @@ jobs:
     runs-on: windows-latest
     name: Windows
     steps:
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+      - name: compile
         run: gcc hello.c
